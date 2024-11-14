@@ -1,0 +1,134 @@
+/* Contenedor principal */
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #333;
+    max-width: 500px;
+    margin: 0 auto;
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  /* Título */
+  .user-profile h2 {
+    font-size: 2rem;
+    color: #024CAA;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #EC8304;
+    padding-bottom: 10px;
+  }
+  
+  /* Imagen de perfil */
+  .profile-image-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #EC8304;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Input */
+  .user-info-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .user-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: black;
+    border: 1px solid #dcdcdc;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+  }
+  
+  .user-input:focus {
+    box-shadow: 0 0 10px rgba(32, 148, 250, 0.2);
+    border: 1px solid #024CAA;
+    outline: none;
+  }
+  
+  /* Botones */
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .cancel-button,
+  .save-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    color: white;
+  }
+  
+  .cancel-button {
+    background-color: #D9534F;
+  }
+  
+  .cancel-button:hover {
+    background-color: #c12e2a;
+  }
+  
+  .save-button {
+    background-color: #EC8304;
+  }
+  
+  .save-button:hover {
+    background-color: #d96f03;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .user-profile {
+      padding: 15px;
+    }
+  
+    .user-input {
+      font-size: 0.9rem;
+    }
+  
+    .cancel-button,
+    .save-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  

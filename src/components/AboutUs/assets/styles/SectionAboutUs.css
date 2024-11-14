@@ -1,0 +1,257 @@
+/* General */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Previene el desplazamiento lateral */
+}
+
+.about-us {
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Asegura que haya padding en los bordes */
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #1a73e8;
+  margin-bottom: 40px;
+}
+
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.section h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #1a73e8;
+  margin-bottom: 15px;
+}
+
+.section p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.mission, .vision, .team, .story, .about-us-final {
+  border-radius: 10px;
+  padding: 30px;
+}
+
+/* Estilo para la sección con imagen a la derecha */
+.story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 80px;
+}
+
+.story .text-content {
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.story .image-content {
+  margin-top: 20px;
+}
+
+.story img {
+  max-width: 450px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos responsivos */
+@media (min-width: 768px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .section h2 {
+    font-size: 32px;
+  }
+
+  .section p {
+    max-width: 800px;
+  }
+
+  .story {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .story .text-content {
+    max-width: 50%;
+    margin-bottom: 0;
+  }
+
+  .story .image-content {
+    max-width: 45%;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .section h2, .section p {
+    margin: 0;
+  }
+
+  .section h2 {
+    grid-column: 1 / 2;
+  }
+
+  .section p {
+    grid-column: 2 / 3;
+  }
+}
+
+/* Timeline */
+.timeline {
+  margin-bottom: 40px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+}
+
+.timeline-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.timeline-date {
+  background-color: #1a73e8;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.timeline-content {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Testimonials */
+.testimonials {
+  text-align: center;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  font-style: italic;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Values */
+.values {
+  background-color: #f4f4f9;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.value-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Gallery */
+.gallery {
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+}

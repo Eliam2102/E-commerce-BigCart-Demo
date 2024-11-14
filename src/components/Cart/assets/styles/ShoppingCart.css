@@ -1,0 +1,248 @@
+/* Estilos para el ítem individual en el carrito */
+main {
+  height: 100vh; /* O la altura de la pantalla */
+  overflow-y: scroll; /* Siempre permitir el scroll vertical */
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  transition: box-shadow 0.3s ease;
+}
+
+.cart-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.cart-item-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.cart-item-quantity {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.quantity-btn, .remove-item {
+  width: 40px;
+  height: 40px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quantity-btn img, .remove-item img {
+  width: 30px !important;
+  height: 30px !important;
+  margin-left: 2px !important;
+}
+
+.cart-item-price {
+  font-size: 1.1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Estilos generales del carrito */
+.shopping-cart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.shopping-cart h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Contenedor principal que divide los ítems y el resumen */
+.shopping-cart-content {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+  max-width: 950px;
+}
+
+/* Lista de ítems del carrito */
+.cart-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  max-height: 400px;
+  overflow-y: auto;
+  flex: 2;
+  margin-top: -10px;
+  padding-right: 10px;
+}
+
+/* Resumen del carrito */
+.cart-summary {
+  flex: 1;
+  background-color: #3686ffdf;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cart-summary p, .cart-summary .balance {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+.cart-checkout, .cart-clear {
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.cart-checkout {
+  background-color: #003270;
+}
+
+.cart-checkout:hover {
+  background-color: #002147;
+}
+
+.cart-clear {
+  background-color: #EC8305;
+}
+
+.cart-clear:hover {
+  background-color: #C66B00;
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+  .shopping-cart-content {
+    width: 100%;
+    max-width: none;
+    gap: 10px;
+  }
+
+  .cart-summary {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shopping-cart-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .cart-item img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .cart-item-title, .cart-item-price {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .quantity-btn, .quantity-input, .remove-item {
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .cart-items-container {
+    max-height: 200px;
+  }
+
+  .cart-summary {
+    max-width: 100%;
+    margin-top: 20px;
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .shopping-cart {
+    padding: 10px;
+  }
+
+  .shopping-cart h2 {
+    font-size: 1.5rem;
+  }
+
+  .cart-item {
+    padding: 8px;
+  }
+
+  .cart-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cart-summary h3 {
+    font-size: 1.3rem;
+  }
+
+  .cart-checkout, .cart-clear {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}

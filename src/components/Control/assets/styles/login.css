@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #F6BD3B;
+    --second-color: #0c3762;
+    --third-color: #ffffffa2;
+    --font-color: #ffffff;
+    --error-color: #db5e5e;
+    --bacground-color: #100f0b;
+    --bacground-color1: #FFF;
+    background-color: var(--bacground-color);
+  }
+  
+  .FormLogin {
+    width: 100%;
+    max-width: 350px; 
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--third-color);
+    color: var(--font-color);
+    border: solid;
+    border-width: 1.5px;
+    box-shadow: 0px 4px 6px rgba(3, 14, 66, 0.897);
+    display: flex;
+  }
+  
+  .ContentFormLogin {
+    font-size: 10px;
+    border: 1px solid;
+    border-color: var(--second-color);
+    background-color: #0c3762;
+    color: var(--font-color);
+    border-radius: 8px;
+    margin-top: 4px;
+    border-width: 1.5px;
+    padding: 20px;
+    display: block;
+  }
+  
+  .encabezado-login {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+  
+  .cart-login {
+    width: 100%; 
+    height: 80%;
+    margin-top: 2rem;
+    max-width: 300px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+  }
+
+  .cart-login:hover{
+    transform: scale(1.50); /* Aumenta ligeramente el tamaño */
+  }
+  
+  
+  input[type="text"], input[type="password"] {
+    width: 95%;
+    font-size: 12px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ffffff90;
+    border: 1px solid #cccccc7f;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: var(--bacground-color);
+    outline: none; 
+  }
+  
+  input[type="text"]:focus {
+    border-color: var(--accent-color); 
+  }
+  
+  .titleLogin{
+    padding: 5px;
+    text-align: center;
+  }
+
+  .send {
+    width: 40%;
+    max-width: 20px; 
+    padding: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    background-color: #0c1a4f73;
+    outline: none;
+    border: none;
+  }
+  
+  .send:focus{
+    outline: none;
+    border: none;
+  }
+
+  .send:hover {
+    border-color: var(--font-color);
+  }
+
+  .buttonAction{
+    display: flex;
+    flex-direction: initial;
+    gap: 1rem;
+  }
+
+  .go-back{
+    width: 40%;
+    max-width: 68px;
+    background-color: #0c1a4f73;
+    color: var(--third-color);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50px;
+  }
+
+  .go-back:hover{
+    border: none;
+  }
+
+  .go-back:focus{
+    outline: none;
+  }
+
+  
+  span {
+    color: var(--error-color);
+    font-size: 10px;
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  /* Media query para pantallas medianas entre 400px y 768px */
+@media (min-width: 401px) and (max-width: 767px) {
+    .FormLogin {
+      max-width: 450px; 
+      padding: 15px;    
+      margin: 2rem auto; 
+    }
+  
+    .send {
+      max-width: 150px;  
+    }
+  
+    .FormLogin h1 {
+      font-size: 20px; 
+      text-align: center; 
+    }
+  
+    .cart-login {
+      display: block; 
+    }
+  }
+  
+
+
+  /* Media query para ajustar el formulario en pantallas grandes */
+  @media (min-width: 768px) {
+    .FormLogin {
+      max-width: 550px; 
+      padding: 20px; 
+    }
+  
+    .send {
+      max-width: 250px; 
+    }
+  
+    .FormLogin h1 {
+      font-size: 24px;
+      overflow: hidden;
+      white-space: nowrap; 
+    }
+  }
+  
+  /* Media query para ajustar el formulario en pantallas pequeñas */
+  @media (max-width: 400px) {
+    .FormLogin {
+      margin: 3rem auto; 
+      padding: 10px;
+      display:block;
+    }
+  
+    .FormLogin h1 { 
+      font-size: 18px; 
+      overflow: hidden; 
+      text-align: center; 
+      white-space: nowrap;
+    }
+
+    .cart_login{
+        display: none;
+    }
+  }
+  

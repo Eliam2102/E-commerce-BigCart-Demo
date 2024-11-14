@@ -1,0 +1,30 @@
+/* SkeletonProductLoader.css */
+.skeleton-product-loader {
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 200px; /* Ajusta el tamaño según tu diseño */
+  }
+  
+  .skeleton-item {
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .skeleton-item.image {
+    height: 150px;
+    width: 100%;
+  }
+  
+  .skeleton-item.title {
+    height: 20px;
+    width: 60%;
+  }
+  
+  .skeleton-item.price {
+    height: 15px;
+    width: 30%;
+  }
